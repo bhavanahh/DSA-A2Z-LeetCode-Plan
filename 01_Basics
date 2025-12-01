@@ -1,1 +1,56 @@
+theory
+
+What is Algorithmic Complexity?
+
+Time Complexity → Why do we use Big-O?
+
+Space Complexity → Extra memory used
+
+Relation between loops & O(n), nested loops & O(n²)
+
+Logarithmic operations → dividing by 2
+
+Best Case, Worst Case, Average Case
+
+
+
+ LeetCode Problems:
+Add Two Integers (LC 2235)
+
+int sum(int num1, int num2) {
+    return num1 + num2;
+}
+
+Subtract Product and Sum of Digits (LC 1281)
+
+#include <stdio.h>
+
+int subtractProductSum(int n) {
+    int sum = 0, product = 1;
+
+    while (n > 0) {
+        int digit = n % 10;
+        sum += digit;
+        product *= digit;
+        n /= 10;
+    }
+
+    return product - sum;
+}
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    int result = subtractProductSum(n);
+    printf("Result = %d\n", result);
+
+    return 0;
+}
+
+
+
+
+
 
