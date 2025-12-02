@@ -1,15 +1,10 @@
 theory
 
 What is Algorithmic Complexity?
-
 Time Complexity → Why do we use Big-O?
-
 Space Complexity → Extra memory used
-
 Relation between loops & O(n), nested loops & O(n²)
-
 Logarithmic operations → dividing by 2
-
 Best Case, Worst Case, Average Case
 
 
