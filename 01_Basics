@@ -1,3 +1,5 @@
+Day1:
+
 theory
 
 What is Algorithmic Complexity?
@@ -10,6 +12,7 @@ Best Case, Worst Case, Average Case
 
 
  LeetCode Problems:
+
 Add Two Integers (LC 2235)
 
 int sum(int num1, int num2) {
@@ -45,6 +48,50 @@ int main() {
 }
 
 
+Day2:
+
+theory
+
+Prime check
+GCD
+Reverse digits
+
+
+Leetcode Problem
+
+Reverse Integer (LC 7)
+
+#include <stdio.h>
+#include <limits.h>
+
+int reverse(int x) {
+    long reversed = 0;
+    while (x != 0) {
+        int digit = x % 10;
+        x /= 10;
+        reversed = reversed * 10 + digit;
+        if (reversed > INT_MAX || reversed < INT_MIN)
+            return 0;
+    }
+    return (int)reversed;
+}
+
+
+Palindrome Number (LC 9)
+
+#include <stdbool.h>
+bool isPalindrome(int x) {
+    if (x < 0 || (x % 10 == 0 && x != 0)) {
+        return false;
+    }
+    int reversed = 0;
+    
+    while (x > reversed) {
+        reversed = reversed * 10 + x % 10;
+        x /= 10;
+    }
+    return (x == reversed || x == reversed / 10);
+}
 
 
 
