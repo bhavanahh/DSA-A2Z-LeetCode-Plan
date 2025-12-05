@@ -129,3 +129,30 @@ int pivotIndex(int* arr, int n) {
 
 }
 
+Day 05
+
+Leetcode problems:
+1342 — Number of Steps to Reduce to Zero
+int numberOfSteps(int num) {
+    int steps = 0;
+    
+    while (num > 0) {
+        if (num % 2 == 0) {
+            num /= 2;     
+        } else {
+            num -= 1;      
+        }
+        steps++;
+    }
+    
+    return steps;
+}
+191 — Number of 1 Bits
+int hammingWeight(uint32_t n) {
+    int count = 0;
+    while (n != 0) {
+        n = n & (n - 1);  
+        count++;
+    }
+    return count;
+}
